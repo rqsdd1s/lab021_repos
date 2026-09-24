@@ -18,14 +18,12 @@ int main()
     cout << "a = ";
     cin >> a;
 
-    z1 = pow(
-        (1 + a + pow(a, 2)) / (2 * a + pow(a, 2))
-        + 2
-        - (1 - a + pow(a, 2)) / (2 * a - pow(a, 2)),
-        -1
-    ) * (5 - 2 * pow(a, 2));
+    z1 = ((a + 2) / sqrt(2 * a)
+        - a / (sqrt(2 * a) + 2)
+        + 2 / (a - sqrt(2 * a)))
+        * (sqrt(a) - sqrt(2)) / (a + 2);
 
-    z2 = (4 - pow(a, 2)) / 2;
+    z2 = 1 / (sqrt(a) + sqrt(2));
 
     cout << "z1 = " << z1 << endl;
     cout << "z2 = " << z2 << endl;
